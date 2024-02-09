@@ -28,10 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `produits` (
-  `id` int(11) NOT NULL,
-  `nom` int(3) NOT NULL,
-  `prix` int(3) NOT NULL,
-  `quantite` int(11) NOT NULL
+    `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `nom` int(3) NOT NULL,
+    `prix` int(3) NOT NULL,
+    `quantite` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
