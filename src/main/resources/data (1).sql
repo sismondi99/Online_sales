@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `produits` (
-    `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `nom` int(3) NOT NULL,
-    `prix` int(3) NOT NULL,
+    `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `nom` VARCHAR(250) NOT NULL,
+    `prix` DECIMAL(10) NOT NULL,
     `quantite` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -41,10 +41,10 @@ CREATE TABLE `produits` (
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `first_name` varchar(250) NOT NULL,
   `last_name` varchar(250) NOT NULL,
-  `mail` varchar(250) NOT NULL,
+  `mail` varchar(250) UNIQUE NOT NULL,
   `password` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

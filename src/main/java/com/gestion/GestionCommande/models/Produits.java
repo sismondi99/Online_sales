@@ -9,7 +9,6 @@ import lombok.Data;
 public class Produits {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
     @Column(name = "nom")
@@ -18,6 +17,4 @@ public class Produits {
     private float prix;
     @Column(name = "quantite")
     private Integer quantite;
-    
-   
 }
