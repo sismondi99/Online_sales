@@ -31,7 +31,9 @@ CREATE TABLE `produits` (
     `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     `nom` VARCHAR(250) NOT NULL,
     `prix` DECIMAL(10) NOT NULL,
-    `quantite` int(11) NOT NULL
+    `quantite` int(11) NOT NULL,
+    `user_id` int(11),
+    CONSTRAINT user_fk FOREIGN KEY (user_id) references users(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -61,28 +63,6 @@ INSERT INTO `users` (`id`, `first_name`, `last_name`, `mail`, `password`) VALUES
 -- Index pour les tables déchargées
 --
 
---
--- Index pour la table `produits`
---
-ALTER TABLE `produits`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT pour les tables déchargées
---
-
---
--- AUTO_INCREMENT pour la table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

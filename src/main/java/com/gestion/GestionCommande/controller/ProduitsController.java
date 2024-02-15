@@ -17,7 +17,6 @@ public class ProduitsController {
     public ProduitsController(ProduitsService produitsService) {
         this.produitsService = produitsService;
     }
-
     @ResponseStatus(value = HttpStatus.CREATED)
     @PostMapping(consumes = APPLICATION_JSON_VALUE)
     public void create(@RequestBody Produits produits) {
